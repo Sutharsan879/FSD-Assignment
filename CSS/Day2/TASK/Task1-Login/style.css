@@ -1,0 +1,103 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-image: url("./BG.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #24292f70;
+    line-height: 3rem;
+    border-radius: 8px;
+}
+h1
+{
+    font-size: 25px;
+    color: #fff;
+}
+.box
+{
+    border-radius: 10px;
+    width: 30vw;
+    padding: 0px 30px 30px 30px;
+}
+.box .profile
+{
+    text-align: center;
+    margin-top: -75px;
+}
+.box .profile img
+{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.form form
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 3.5rem;
+}
+form .input-div input 
+{
+    padding: 10px;
+    width: 20vw;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: none;
+    font-size: 17px;
+    color: rgb(206, 168, 133);
+    border-radius: 3px;
+}
+form input::placeholder
+{
+    color: #141414;
+}
+form .input-div
+{
+    line-height: 4rem;
+}
+form input:hover
+{
+    background: none;
+}
+form .input input
+{
+    width:25px;
+}
+form .input span
+{
+    margin-right: 30px;
+    color: #fff;
+    font-size: 18px;
+}
+form .input span u
+{
+    cursor: pointer;
+}
+form  button
+{
+    color: #fff;
+    background-color: green;
+    width: 20vw;
+    text-align: center;
+    font-size: 20px;
+    padding: 8px 0px;
+    border: none;
+    border-bottom: 2px solid white;
+    border-right: 2px solid #fff;
+    border-radius: 4px;
+}

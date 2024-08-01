@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        /*Universal Selector*/
+        *
+        {
+            color: green;
+        }
+        /* Tag Selector */
+        table
+        {
+            border: 1.5px solid grey;
+        }
+        /* ID Selector */
+        #head
+        {
+            border: 1px solid #0ef;
+            width: 50%;
+            text-align: center;
+            background-color: rgba(0, 0, 255, 0.479);
+        }
+        /* Class Selector */
+        .table
+        {
+            border: 2px solid #333;
+            width: 50%;
+            text-align: center;
+        }
+        .table,th,td
+        {
+            border: 1px solid green;
+            border-collapse: collapse;
+        }
+        th,td
+        {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head">Heading.</h1>
+    <br>
+    <table class="table">
+        <tr><th>EID</th><th>EName</th><th>ESalary</th></tr>
+        <tr><td>069</td><td>NickName</td><td>69000</td></tr>
+        <tr><td>024</td><td>Dhanush</td><td>20000</td></tr>
+        <tr><td>073</td><td>Dilip</td><td>50000</td></tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        function fact()
+        {
+            let num=Number(document.getElementById("num").value);
+
+            let fact=1;
+
+            for(let i=1;i<=num;i++)
+            {
+                fact=fact*i;
+            }
+            let result="Factorial : "+fact;
+            document.getElementById("result-div").innerHTML=result;
+        }
+    </script>
+
+    <style>
+        .parent
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+        }
+        .container
+        {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid gray;
+            padding: 20px;
+            width: 15vw;
+            line-height: 1.5rem;
+            border-radius: 5px;
+        }
+        input
+        {
+            padding: 5px 0px 5px 8px;
+        }
+        button
+        {
+            margin-top: 20px;
+            padding: 5px 0px 5px 0px;
+            font-size: 15px;
+            color: #fff;
+            background-color: green;
+            border: none;
+            cursor: pointer;
+        }
+        #result-div
+        {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h1>To Find Factorial</h1>
+        <div class="container">
+            <label for="">Enter The Number :</label>
+            <input type="text" id="num" onfocus="this.value=''" onblur="fact()">
+            <button onclick="fact()">Find Factorial</button>
+            <div id="result-div">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

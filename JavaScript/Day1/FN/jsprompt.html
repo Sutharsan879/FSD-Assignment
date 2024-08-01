@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        function Welcome()
+        {
+            alert("Welcome ! ! !");
+        }
+        function myprompt()
+        {
+            let name=prompt("Write Your Name :");
+            alert("Welcome"+" "+name);
+        } 
+        function leave() 
+        {
+            return "Do you want to Leave the page?";
+        }
+        console.log(Date);
+    </script>
+</head>
+<body onload="Welcome()" onbeforeunload="return leave()">
+    <button onclick="myprompt()">Click</button>
+
+</body>
+</html>

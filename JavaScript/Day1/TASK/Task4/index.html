@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions</title>
+    <script>
+        function myterm()
+        {
+            var s=document.getElementById("txt").value;
+            var op=document.getElementById("op").value;
+            let result="";
+            if(op=="len")
+            {
+                result="length : "+s.length;
+            }
+            if(op=="char")
+            {
+                result="Character : "+s.charAt(0);
+            }
+            if(op=="slice")
+            {
+                result="Slice : "+s.slice(3,6);
+            }
+            if(op=="sub")
+            {
+                result="SubString : "+s.substring(3,7);
+            }
+            if(op=="str")
+            {
+                result="Substr : "+s.substr(4,8);
+            }
+            if(op=="upper")
+            {
+                result="UpperCase : "+s.toUpperCase();
+            }
+            if(op=='lower')
+            {
+                result="LowerCase : "+s.toLowerCase();
+            }
+            if(op=="concat")
+            {
+                result="Concat : "+s.concat(" ","System");
+            }
+            if(op=="trim")
+            {
+                result="Trim : "+s.trim(5);
+            }
+            if(op=="tstart")
+            {
+                result="Trimstart : "+s.trimStart(0);
+            }
+            if(op=="tend")
+            {
+                result="TrimEnd : "+s.trimEnd(6);
+            }
+            if(op=="repeat")
+            {
+                result="Repeat : "+s.repeat(3);
+            }
+            if(op=="replace")
+            {
+                result="Replace : "+s.replace("World","Hello");
+            }
+            if(op=="replaceall")
+            {
+                result="Replaceall : "+s.replaceAll("World","Hello");
+            }
+            if(op=="split")
+            {
+                result="split : "+s.split();
+            }
+            document.getElementById("result").innerHTML=result;
+        }
+    </script>
+</head>
+<body>
+    <div class="container" style="text-align: center;line-height: 2rem;">
+        <label for="">Enter the String :</label><br>
+        <input type="text" id="txt" style="width: 10vw;padding: 5px 0px 5px 5px;"><br>
+        <label for="">Select the Operation :</label><br>
+        <select name="" id="op" style="width: 10vw;padding: 5px 0px;">
+            <option value="len">Length</option>
+            <option value="char">Character</option>
+            <option value="slice">Slice</option>
+            <option value="sub">Substring</option>
+            <option value="str">Substr</option>
+            <option value="upper">UpperCase</option>
+            <option value="lower">LowerCase</option>
+            <option value="concat">Concat</option>
+            <option value="trim">Trim</option>
+            <option value="tstart">TrimStart</option>
+            <option value="tend">TrimEnd</option>
+            <option value="repeat">Repeat</option>
+            <option value="replace">Replace</option>
+            <option value="replaceall">Replaceall</option>
+            <option value="split">Split</option>
+        </select><br>
+        <button onclick="myterm()">Click</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

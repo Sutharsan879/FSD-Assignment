@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+    <script>
+        function Palindrome()
+        {
+            let num=document.getElementById("str").value;
+            var str="";
+            for(let i=num.length-1;i>=0;i--)
+            {
+                str+=num.charAt(i);
+            }
+            if(num==str)
+            {
+                document.getElementById("result-div").innerHTML="Palindrome";
+            }
+            else
+            {
+                document.getElementById("result-div").innerHTML="Not Palindrome";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <label for="">Enter the String :</label>
+        <input type="text" id="str">
+        <button onclick="Palindrome()">Click</button>
+        <div id="result-div">
+
+        </div>
+    </div>
+</body>
+</html>

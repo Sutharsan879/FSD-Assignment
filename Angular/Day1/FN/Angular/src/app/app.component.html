@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Interpolation Example</h1>
+    <app-project></app-project>
+    <br />
+    Name : {{ name }}
+    <br />
+    age : {{ age }}<br />
+    Email : <input type="email" value="{{ email }}" /> <br /><br />
+    <h1>Property Binding Example</h1>
+    Name : <input type="text" [value]="name" /><br />
+    Age : <input type="text" [value]="age" /><br />
+    Email : <input type="email" [value]="email" />
+    <br />
+    <h1>Event Binding Example</h1>
+    <button (click)="changeName()">Change</button>
+    <!-- <button (click)="changeage()">Change Age<button> -->
+    <button (click)="changeemail()">Change Email</button><br />
+    <img src="download.png" alt="" />
+
+    <h1>Two Data Binding</h1>
+    <br />
+    <input type="text" placeholder="Enter the name" [(ngModel)]="fname" />
+    <br />
+    <b>Welcome {{ fname }}</b>
+
+    <br />
+    <h1 [ngClass]="myclass">Structural and Attribute Directives Example</h1>
+    <br />
+    <button (click)="changeflag()">Show or Hide Div</button>
+    <div *ngIf="flag" [ngStyle]="mystyle">
+      <br />
+      <ul>
+        <li *ngFor="let vec of players" (click)="setSelectedItem(vec)">
+          {{ vec }}
+        </li>
+      </ul>
+      <h1>You are the Player : {{ selectvehicle }}</h1>
+
+      <div [ngSwitch]="selectvehicle">
+        <font color="green" *ngSwitchCase="'Two Wheeler'">Bike</font>
+        <font color="green" *ngSwitchCase="'Three Wheeler'">Auto</font>
+        <font color="green" *ngSwitchCase="'Four Wheeler'">Car</font>
+        <font color="green" *ngSwitchDefault>Invalid</font>
+      </div>
+      <br />
+      <button (click)="changestyle()">Change Style</button>
+    </div>
+    <br />
+
+    <table align="center">
+      <tr>
+        <th><a routerLink="home">Home</a></th>
+        <th><a routerLink="about">About</a></th>
+        <th><a routerLink="contact">Contact</a></th>
+      </tr>
+    </table>
+    <div>
+      Space for new component
+      <router-outlet></router-outlet>
+    </div>
+    <div>
+      <p>ADD : {{sum}}</p>
+      <p>SUB : {{difference}}</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login With CSS</title>
+    <style>
+        .container
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        table
+        {
+            box-shadow: 5px 5px 5px gray, inset 2px 2px 5px gray;
+            border-radius: 5px;
+            height: 40vh;
+            width: 23vw;
+            text-align: center;
+        }
+        .head
+        {
+            font-size: 30px;
+        }
+        input
+        {
+            padding: 5px 5px;
+            border: 1px solid gray; 
+            border-radius: 8px;
+        }
+        table .btn
+        {
+            border: 2px solid gray;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 15px;
+            font-weight:600;
+            cursor: pointer;
+        }
+        .us
+        {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr class="head"><th colspan="2">Login Page</th></tr><br>
+            <tr><td class="us">User Name</td><td><input type="text" maxlength="20" required></td></tr><br>
+            <tr><td class="us">Password</td><td><input type="password" minlength="8" required></td></tr><br>
+            <tr class="btn"><td colspan="2"><button class="btn">Login</button></td></tr>
+        </table>
+    </div>
+</body>
+</html>

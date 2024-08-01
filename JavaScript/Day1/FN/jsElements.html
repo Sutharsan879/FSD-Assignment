@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        function calculate()
+        {
+            let a=Number(document.getElementById("n1").value);
+            let b=Number(document.getElementById("n2").value);
+            let op=document.getElementById("op").value;
+
+            let result=" ";
+
+            if(op=="add")
+            {
+                result="Addition : "+(a+b);
+            }
+            if(op=="Sub")
+            {
+                result="Subtraction : "+(a-b);
+            }
+            if(op=="Mul")
+            {
+                result="Multiplication : "+(a*b);
+            }
+            if(op=="Div")
+            {
+                result="Division : "+(a/b);
+            }
+            document.getElementById("Result-div").innerHTML=result;
+        }
+    </script>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .container
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            flex-direction: column;
+            border: 2px solid gray;
+            line-height: 2rem;
+            padding: 20px;
+            width: 15vw;
+        }
+        input
+        {
+            padding: 5px 0px 5px 5px;
+        }
+        button
+        {
+            margin-top: 20px;
+            padding: 10px 0px;
+            font-size: 20px;
+            background-color: green;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="">Enter First Number : </label>
+        <input type="text" id="n1">
+        <label for="">Enter Second Number : </label>
+        <input type="text" id="n2">
+        <label for="">Select the Operation : </label>
+        <select name="" id="op">
+            <option value="add">Addition</option>
+            <option value="Sub">Subtraction</option>
+            <option value="Mul">Multiplication</option>
+            <option value="Div">Division</option>
+        </select>
+        <button onclick="calculate()">Calculate</button>
+        <div id="Result-div">
+
+        </div>
+    </div>
+</body>
+</html>

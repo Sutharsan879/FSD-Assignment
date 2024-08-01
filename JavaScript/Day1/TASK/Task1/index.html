@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime (or) Not</title>
+    <script>
+        function myprime()
+        {
+            let num=Number(document.getElementById("num").value);
+
+            let c=0;
+            for(let i=1;i<=num;i++)
+            {
+                if(num%i==0)
+                {
+                    c++;
+                }
+            }
+            if(c==2)
+            {
+                document.getElementById("result-div").innerHTML="Prime";
+            }
+            else
+            {
+                document.getElementById("result-div").innerHTML="Not Prime";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="parent">
+        <h1>To Find Prime (or) Not Prime</h1>
+        <div class="container">
+            <label for="">Enter The Number :</label>
+            <input type="text" id="num">
+            <button onclick="myprime()">Find Prime</button>
+            <div id="result-div">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
